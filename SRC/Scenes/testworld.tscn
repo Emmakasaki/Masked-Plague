@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dv65spvh1ubfe"]
 
-[ext_resource type="Script" path="res://CharacterBody3D.gd" id="1_5sgqc"]
+[ext_resource type="Script" path="res://SRC/Scripts/CharacterBody3D.gd" id="1_6hoaq"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ti6kv"]
 
@@ -21,7 +21,7 @@ mesh = SubResource("PlaneMesh_ti6kv")
 material = SubResource("StandardMaterial3D_h3dle")
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
-script = ExtResource("1_5sgqc")
+script = ExtResource("1_6hoaq")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
 transform = Transform3D(0.626165, 0, 0, 0, 1.16269, 0, 0, 0, 0.000397564, 0, 0.610633, 0)
