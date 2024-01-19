@@ -27,7 +27,7 @@ fov = 130.868
 script = ExtResource("1_v1k0d")
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
-script = ExtResource("1_6hoaq")
+script = ExtResource("1_5sgqc")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
 transform = Transform3D(0.626165, 0, 0, 0, 1.16269, 0, 0, 0, 0.000397564, 0, 0.610633, 0)
