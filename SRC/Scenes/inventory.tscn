@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3ut67wn6hewl"]
+[gd_scene load_steps=2 format=3 uid="uid://d3ut67wn6hewl"]
 
 [ext_resource type="Script" path="res://SRC/Scripts/inventory.gd" id="1_vyhfk"]
-[ext_resource type="PackedScene" uid="uid://d07gflpdt3eid" path="res://SRC/Scenes/slot.tscn" id="2_cshqd"]
 
 [node name="Inventory" type="Control"]
 layout_mode = 3
@@ -35,11 +34,13 @@ layout_mode = 2
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 
-[node name="Button" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/Header"]
+[node name="Spawner" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/Header"]
 custom_minimum_size = Vector2(300, 50)
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
+theme_override_font_sizes/font_size = 30
+text = "Spawn Item"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -51,5 +52,4 @@ theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 8
 
-[node name="Slot" parent="ColorRect/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("2_cshqd")]
-layout_mode = 2
+[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/Header/Spawner" to="." method="_on_spawner_pressed"]
